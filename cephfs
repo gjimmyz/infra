@@ -64,7 +64,7 @@ osd_deep_scrub_stride = 131072
 # default 0
 osd_scrub_begin_hour = 23
 # default 24
-osd_scrub_end_hour = 9
+osd_scrub_end_hour = 8
 
 二、系统层面
 read_ahead_kb
