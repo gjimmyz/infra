@@ -68,3 +68,4 @@ osd_scrub_end_hour = 9
 
 二、系统层面
 read_ahead_kb
+nr_requests
