@@ -1,0 +1,54 @@
+1、查看cache
+hpssacli ctrl slot=3 show config detail|grep -i Cache
+   Cache Serial Number: PDNMD0BRH8L0KO
+   Wait for Cache Room: Disabled
+   Cache Board Present: True
+   Cache Status: OK
+   Cache Ratio: 100% Read / 0% Write
+   Drive Write Cache: Disabled
+   Total Cache Size: 4.0 GB
+   Total Cache Memory Available: 3.8 GB
+   No-Battery Write Cache: Enabled
+   Cache Module Temperature (C): 42
+         LD Acceleration Method: Controller Cache
+         LD Acceleration Method: Controller Cache
+
+2、在没有电池的情况下开启raid写缓存
+hpssacli ctrl slot=3 modify nobatterywritecache=enable
+
+Warning: Enabling write caching on a cache module without a fully charged
+         battery/capacitor could cause data loss in the event of power failure.
+         Use of this feature is not recommended unless proper precautions are
+         followed to maintain power to the controller. Continue (y/n)?y
+
+3、查看下
+hpssacli ctrl slot=3 show config detail|grep -i Cache
+   Cache Serial Number: PDNMD0BRH8L0KO
+   Wait for Cache Room: Disabled
+   Cache Board Present: True
+   Cache Status: OK
+   Cache Ratio: 100% Read / 0% Write
+   Drive Write Cache: Disabled
+   Total Cache Size: 4.0 GB
+   Total Cache Memory Available: 3.8 GB
+   No-Battery Write Cache: Enabled
+   Cache Module Temperature (C): 42
+         LD Acceleration Method: Controller Cache
+         LD Acceleration Method: Controller Cache
+
+4、设置读写百分比 读在前 写在后
+hpssacli ctrl slot=3 modify cacheratio=10/90
+5、最终效果
+hpssacli ctrl slot=3 show config detail|grep -i Cache
+   Cache Serial Number: PDNMD0BRH8L0KO
+   Wait for Cache Room: Disabled
+   Cache Board Present: True
+   Cache Status: OK
+   Cache Ratio: 10% Read / 90% Write
+   Drive Write Cache: Disabled
+   Total Cache Size: 4.0 GB
+   Total Cache Memory Available: 3.8 GB
+   No-Battery Write Cache: Enabled
+   Cache Module Temperature (C): 42
+         LD Acceleration Method: Controller Cache
+         LD Acceleration Method: Controller Cache
