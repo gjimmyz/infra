@@ -11,6 +11,7 @@ Set Disk Cache Policy to Enabled on Adapter 0, VD 5 (target id: 5) success
 Exit Code: 0x00
 
 2、dell cache
+/opt/MegaRAID/MegaCli/MegaCli64 -cfgdsply -aALL |grep Policy
 Default Cache Policy: WriteBack, ReadAdaptive, Direct, Write Cache OK if Bad BBU
 Current Cache Policy: WriteBack, ReadAdaptive, Direct, Write Cache OK if Bad BBU
 Default Access Policy: Read/Write
