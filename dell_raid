@@ -9,3 +9,10 @@ Set Disk Cache Policy to Enabled on Adapter 0, VD 4 (target id: 4) success
 Set Disk Cache Policy to Enabled on Adapter 0, VD 5 (target id: 5) success
 
 Exit Code: 0x00
+
+2、dell cache
+Default Cache Policy: WriteBack, ReadAdaptive, Direct, Write Cache OK if Bad BBU
+Current Cache Policy: WriteBack, ReadAdaptive, Direct, Write Cache OK if Bad BBU
+Default Access Policy: Read/Write
+Current Access Policy: Read/Write
+Disk Cache Policy   : Enabled
