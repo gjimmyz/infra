@@ -5,3 +5,5 @@
 3、hp_raid电池相关
 
 4、dell_raid
+
+5、grafana_report
