@@ -1,0 +1,2 @@
+grafana-reporter -cmd_enable=1 -cmd_apiKey xxxxxxxx -ip localhost:3000 -cmd_dashboard r6lloPJmz -cmd_ts from=now-1d -cmd_o ${outfile}
+echo "请看附件" | mail -s "grafana_reporter" -a ${outfile} -r gong_zheng@mingmatechs.com gong_zheng@mingmatechs.com
