@@ -1,4 +1,4 @@
-1、开启Drive Write Cache: Disabled看到这个是默认关闭的 追求性能 放弃安全 
+1、开启Drive Write Cache: Disabled看到这个是默认关闭的 追求性能 放弃安全 这个参数小心修改 可以先测试一批机器 
 [root@ceph03_node31 ~]# /opt/MegaRAID/MegaCli/MegaCli64 -LDSetProp -EnDskCache -Immediate -LAll -aAll
 
 Set Disk Cache Policy to Enabled on Adapter 0, VD 0 (target id: 0) success
